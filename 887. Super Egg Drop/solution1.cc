@@ -1,5 +1,6 @@
 // Dynamic programming with binary search.
 // Time: O(K * N * logN), Space: O(K * N)
+
 class Solution {
 public:
     static const int kMaxK = 100 + 5;
