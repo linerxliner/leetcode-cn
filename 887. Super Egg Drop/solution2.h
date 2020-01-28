@@ -1,5 +1,5 @@
 // Dynamic programming with optimal strategy.
-// Time: O(K * N), Space O(N)
+// Time: O(K * N), Space: O(N)
 
 class Solution {
 public:
