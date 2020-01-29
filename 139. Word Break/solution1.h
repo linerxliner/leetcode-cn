@@ -6,7 +6,7 @@ public:
     map<int, bool> dp;
     
     bool Match(string & s, int begin, string & w) {
-        if (s.size() < w.size()) return false;
+        if (s.size() - begin < w.size()) return false;
         
         for (int i = 0; i < w.size(); ++i) {
             if (s[begin + i] != w[i]) return false;
