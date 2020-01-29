@@ -1,4 +1,5 @@
 // BFS
+// Time: O(n^2), Space: O(n)
 
 class Solution {
 public:
