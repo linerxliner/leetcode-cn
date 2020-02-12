@@ -22,8 +22,6 @@ public:
     }
     
     int coinChange(vector<int>& coins, int amount) {
-        vector<int> dp(amount + 1, -1);
-        
         sort(coins.begin(), coins.end(), greater<int>());
         DFS(coins, amount, 0, 0);
         
