@@ -1,3 +1,6 @@
+// Counter.
+// Time: O(n^2); Space: O(n)
+
 class Solution:
     def longestSubstring(self, s: str, k: int) -> int:
         if len(s) == 0 or len(s) < k:
