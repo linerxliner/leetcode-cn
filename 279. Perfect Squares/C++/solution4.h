@@ -1,5 +1,5 @@
 // Lagrange's four-square theorem.
-// Time: O(n), Space: O(1)
+// Time: O(sqrt(n)), Space: O(1)
 
 class Solution {
 public:
