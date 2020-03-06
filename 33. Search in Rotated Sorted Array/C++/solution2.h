@@ -1,6 +1,8 @@
 /* Complexity
  *   Time: O(log(n))
  *   Space: O(1)
+ * Description
+ *   Binary search by getting situation of interval from nums[lo] and nums[mi].
  */
 
 class Solution {
