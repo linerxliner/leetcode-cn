@@ -23,11 +23,14 @@ class Solution(object):
             if c in s1_cnt:
                 s2_cnt[c] = s2_cnt.get(c, 0) + 1
                 win_len += 1
-                l = r - win_len + 1
-                while s2_cnt[c] > s1_cnt[c]:
-                    s2_cnt[s2[l]] -= 1
-                    l += 1
-                    win_len -= 1
+                if s2_cnt[c] > s1_cnt[c]:
+                    l = r - win_len + 1
+                    while True:
+                        s2_cnt[s2[l]] -= 1
+                        l += 1
+                        win_len -= 1
+                        if s2[l - 1] == c:
+                            break
                 if win_len == s1_len:
                     return True
             else:
