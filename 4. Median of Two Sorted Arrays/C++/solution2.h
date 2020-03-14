@@ -17,8 +17,8 @@ public:
         while (lo <= hi) {
             int idx1 = (lo + hi) / 2, idx2 = (len1 + len2 + 1) / 2 - idx1;
 
-            if (idx1 > 0 && idx2 < len2 && nums1[idx1 - 1] > nums2[idx2]) hi = idx1 - 1;
-            else if (idx1 < len1 && idx2 > 0 && nums1[idx1] < nums2[idx2 - 1]) lo = idx1 + 1;
+            if (idx1 > 0 && nums1[idx1 - 1] > nums2[idx2]) hi = idx1 - 1;
+            else if (idx1 < len1 && nums1[idx1] < nums2[idx2 - 1]) lo = idx1 + 1;
             else {
                 if ((len1 + len2) % 2) {
                     if (idx1 == 0) return nums2[idx2 - 1];
