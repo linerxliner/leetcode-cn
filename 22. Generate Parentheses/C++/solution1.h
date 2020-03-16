@@ -1,6 +1,6 @@
 /* Complexity
- *   Time: O(4 ^ n / (n * sqrt(n)))
- *   Space: O(4 ^ n / (n * sqrt(n)))
+ *   Time: O(4 ^ n / (n ^ (2 / 3)))
+ *   Space: O(4 ^ n / (n ^ (2 / 3)))
  * Description
  *   DFS with backtracking.
  */
