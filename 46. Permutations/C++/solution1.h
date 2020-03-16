@@ -9,24 +9,27 @@ class Solution {
 public:
     vector<vector<int>> result;
 
-    void GeneratePermutation(vector<int>& nums, vector<int>& answer, int depth) {
+    void GeneratePermutation(vector<int>& nums, vector<int>& answer, set<int>& used, int depth) {
         if (depth == nums.size()) {
             result.push_back(answer);
             return;
         }
 
         for (auto n: nums) {
-            if (find(answer.begin(), answer.begin() + depth, n) == (answer.begin() + depth)) {
+            if (used.count(n) == 0) {
+                used.insert(n);
                 answer[depth] = n;
-                GeneratePermutation(nums, answer, depth + 1);
+                GeneratePermutation(nums, answer, used, depth + 1);
+                used.erase(n);
             }
         }
     }
 
     vector<vector<int>> permute(vector<int>& nums) {
         vector<int> answer(nums.size());
+        set<int> used;
 
-        GeneratePermutation(nums, answer, 0);
+        GeneratePermutation(nums, answer, used, 0);
 
         return result;
     }

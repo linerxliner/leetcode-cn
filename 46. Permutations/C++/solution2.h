@@ -9,21 +9,21 @@ class Solution {
 public:
     vector<vector<int>> result;
 
-    void GeneratePermutation(vector<int>& nums, int begin, int depth) {
-        if (depth == nums.size()) {
+    void GeneratePermutation(vector<int>& nums, int begin) {
+        if (begin == nums.size()) {
             result.push_back(nums);
             return;
         }
 
         for (int i = begin; i < nums.size(); ++i) {
             swap(nums[begin], nums[i]);
-            GeneratePermutation(nums, begin + 1, depth + 1);
+            GeneratePermutation(nums, begin + 1);
             swap(nums[begin], nums[i]);
         }
     }
 
     vector<vector<int>> permute(vector<int>& nums) {
-        GeneratePermutation(nums, 0, 0);
+        GeneratePermutation(nums, 0);
 
         return result;
     }
