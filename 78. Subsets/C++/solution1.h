@@ -1,5 +1,5 @@
 /* Complexity
- *   Time: O(2 ^ n)
+ *   Time: O(n * (2 ^ n))
  *   Space: O(2 ^ n)
  * Description
  *   Incremental construction.
