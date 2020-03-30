@@ -1,6 +1,6 @@
 /* Complexity
- *   Time: O(m * n)
- *   Space: O(m)
+ *   Time: O(m * n ^ 2)
+ *   Space: O(n)
  */
 
 class Solution {
